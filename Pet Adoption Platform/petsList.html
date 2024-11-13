@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<script>
+    function myFunction(id){
+        console.log(id);
+    }
+</script>
+<body>
+
+    <!-- Header -->
+    <header class="bg-gray-700 text-white py-12">
+        <h1 class="absolute text-yellow-400 text-4xl left-2.5 font-bold mb-8">PetSafeHome</h1>
+        <nav class="absolute top-8 right-10">
+            <ul class="flex gap-8 items-center">
+                <li><a href="home.html#contact" class="btn btn-light">Contact us</a></li>
+                <li><a href="home.html#faq" class="btn btn-light">FAQ'S</a></li>
+                <li><a href="home.html#testmonials" class="btn btn-light">Testimonial</a></li>
+                <li><a href="home.html" class="btn btn-light">Home</a></li>
+                <li><a href="login.html" class="btn btn-light">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-full mt-6">
+        <h3 class="text-3xl font-bold text-black text-center mb-6">Dogs Available For Adoption</h3>
+
+        
+        <div class="container mx-auto px-6">
+            <div class="flex gap-6">
+
+                
+                <div class="w-1/4 bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <form>
+                        <a href="#" class="text-lg font-semibold mb-4 inline-block text-blue-400 hover:underline">Clear All Filters</a>
+                        
+                        
+                        <label for="pet" class="block mb-2">Pet Type</label>
+                        <select id="pet" class="w-full p-2 border rounded-lg mb-4">
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="cat">Rabit</option>
+                        </select>
+
+                        
+                        <label for="state" class="block mb-2">Search by State</label>
+                        <select id="state" class="w-full p-2 border rounded-lg mb-4">
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CG">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OD">Odisha</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UK">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+
+                        <button type="submit" class="w-full py-2 bg-orange-500 text-white rounded-lg mt-4 hover:bg-blue-600 transition">
+                            Apply Filter
+                        </button>
+                    </form>
+                </div>
+                <form>
+                    <input type="hidden" name="id">
+                </form>
+               
+                <div class="w-3/4">
+                    <div class="flex gap-6 flex-wrap justify-evenly">
+
+                       
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(10)">
+                            <a href="#"><img src="pet.avif" class="w-full h-48 object-cover" alt="Jackey"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Simba</h5>
+                                <p class="text-gray-600">Male</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                       
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(11)">
+                           <a><img src="cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Tigger</h5>
+                                <p class="text-gray-600">Male</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(12)">
+                            <a href="#"><img src="review1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">AVIOLA</h5>
+                                <p class="text-gray-600">Male</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(13)">
+                            <a href="#"><img src="rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Floppy</h5>
+                                <p class="text-gray-600">Male</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(14)">
+                            <a href="#"><img src="rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Fuzzy</h5>
+                                <p class="text-gray-600">Male</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(15)">
+                            <a href="#"><img src="cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Bella</h5>
+                                <p class="text-gray-600">FeMale</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(16)">
+                            <a href="#"><img src="review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Daisy</h5>
+                                <p class="text-gray-600">FeMale</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(17)">
+                            <a href="#"><img src="dog2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-semibold text-orange-600">Jack</h5>
+                                <p class="text-gray-600">FeMale</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+<!-- Footer -->
+<footer class="max-w-full bg-gray-800 text-white py-12 h-96 mt-24">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center md:items-start">
+            
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h1 class="text-yellow-600 text-4xl font-bold">PetSafeHome</h1>
+                <p class="text-sm mt-3">Your trusted platform for pet adoption.</p>
+            </div>
+
+            <div class="mb-6 md:mb-0 mx-4">
+                <h3 class="text-3xl text-blue-400 font-semibold hover:text-blue-600">Our Links</h3>
+                <ul class="mt-3 px-6">
+                    <li><a href="#" class="hover:text-green-400 text-semibold">About us</a></li>
+                    <li><a href="#" class="hover:text-green-400">Service</a></li>
+                    <li><a href="#" class="hover:text-green-400">Adopt</a></li>
+                    <li><a href="#" class="hover:text-green-400">Privacy</a></li>
+                    <li><a href="#" class="hover:text-green-400">FAQ'S</a></li>
+                </ul>
+            </div>
+
+            <div id="contact">
+                <h3 class="text-3xl text-blue-400 font-semibold hover:text-blue-600">Contact us</h3>
+                <ul class="mt-3">
+                    <li>+4444444444</li>
+                    <li>Sai, Oddessy Building, Road no.16, Benz Circle, Vijaywada</li>
+                    <li>Sai Krishn Plaza, Road no.8, Hitech City, Hyderabad</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-3xl text-blue-400 font-semibold hover:text-blue-600">Follow us</h3>
+                <ul class="mt-3 px-6">
+                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="mt-12 text-center">
+            <p>&copy; <span class="text-yellow-600">PetSafeHome</span> All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
