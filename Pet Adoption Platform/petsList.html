@@ -4,134 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PetList</title>
+    <link rel="icon" href="logo.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script>
-    function myFunction(id){
-        console.log(id);
-    }
+<script src="search.js">
+    
 </script>
 <body>
 
-    <!-- Header -->
     <header class="bg-gray-700 text-white py-12">
-        <h1 class="absolute text-yellow-400 text-4xl left-2.5 font-bold mb-8">PetSafeHome</h1>
-        <nav class="absolute top-8 right-10">
+        <h1 class="absolute text-yellow-400 text-4xl left-2.5 font-bold mb-8 top-4">PetSafeHome</h1>
+        <nav class="absolute top-8 right-12">
             <ul class="flex gap-8 items-center">
-                <li><a href="home.html#contact" class="btn btn-light">Contact us</a></li>
-                <li><a href="home.html#faq" class="btn btn-light">FAQ'S</a></li>
-                <li><a href="home.html#testmonials" class="btn btn-light">Testimonial</a></li>
-                <li><a href="home.html" class="btn btn-light">Home</a></li>
-                <li><a href="login.html" class="btn btn-light">Sign In</a></li>
+                <li><button onclick="goBack()" class="btn btn-light">Back</button></li>
+                <li>
+                 
+                    <button onclick="showProfilePage()" class="relative">
+                        <i class="fa-regular fa-user"></i><i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    
+                    <div id="profile" class="hidden absolute top-full mt-10 ml-4 right-0 bg-gray-500 bg-opacity-50 flex justify-center items-center w-48 rounded-lg shadow-xl">
+                        <div class="bg-gray-100 p-4 w-full rounded-lg">
+                            <p><a href="userProfile.html" class="text-blue-600">View Profile</a></p>
+                            <p><a href="home.html" class="text-blue-600">Log Out</a></p>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
 
+   
+
     <!-- Main Content -->
     <main class="max-w-full mt-6">
-        <h3 class="text-3xl font-bold text-black text-center mb-6">Dogs Available For Adoption</h3>
+        <div class="ml-36">
+            <p class="text-3xl mt-6 font-bold text-blue-600">Hi,<span class="text-purple-600 tracking-tight md:tracking-wide">Yash Patel</span> Ready to Meet Your New Best Friend ?</p>
+            <p class="text-lg text-black-600 font-semibold ml-12 mt-4">
+                "Get ready for tail wags, purrs, and endless love—your new best friend is just click away!"
+            </p>
+            
+        </div>
+        <h3 class="text-3xl font-bold text-black text-center mb-6 mt-24">Pets Available For Adoption</h3>
+        <div class="flex justify-center items-center">
+            <label for="search" class="text-2xl text-blue-600 font-bold">Search Categorey Here</label>
+            <input type="text" id="searchInput" oninput="searchPets()"  id="search" placeholder="Search Here" class="w-1/4 ml-2 mt-8 px-4 py-3 mb-6 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+        </div><br>
 
-        
         <div class="container mx-auto px-6">
             <div class="flex gap-6">
 
                 
                 <div class="w-1/4 bg-gray-100 p-6 rounded-lg shadow-lg">
-                    <form>
-                        <a href="#" class="text-lg font-semibold mb-4 inline-block text-blue-400 hover:underline">Clear All Filters</a>
+
+                        <a href="#"class="text-lg font-semibold mb-4 inline-block text-blue-400 hover:underline" onclick="resetFilters()">Reset Filters</a>
                         
                         
                         <label for="pet" class="block mb-2">Pet Type</label>
                         <select id="pet" class="w-full p-2 border rounded-lg mb-4">
+                            <option value="all">All</option>
                             <option value="dog">Dog</option>
                             <option value="cat">Cat</option>
-                            <option value="cat">Rabit</option>
+                            <option value="rabbit">Rabit</option>
                         </select>
 
                         
                         <label for="state" class="block mb-2">Search by State</label>
-                        <select id="state" class="w-full p-2 border rounded-lg mb-4">
-                            <option value="AN">Andaman and Nicobar Islands</option>
-                            <option value="AP">Andhra Pradesh</option>
-                            <option value="AR">Arunachal Pradesh</option>
-                            <option value="AS">Assam</option>
-                            <option value="BR">Bihar</option>
-                            <option value="CG">Chhattisgarh</option>
-                            <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
-                            <option value="DL">Delhi</option>
-                            <option value="GA">Goa</option>
-                            <option value="GJ">Gujarat</option>
-                            <option value="HR">Haryana</option>
-                            <option value="HP">Himachal Pradesh</option>
-                            <option value="JH">Jharkhand</option>
-                            <option value="KA">Karnataka</option>
-                            <option value="KL">Kerala</option>
-                            <option value="LA">Ladakh</option>
-                            <option value="LD">Lakshadweep</option>
-                            <option value="MP">Madhya Pradesh</option>
-                            <option value="MH">Maharashtra</option>
-                            <option value="MN">Manipur</option>
-                            <option value="ML">Meghalaya</option>
-                            <option value="MZ">Mizoram</option>
-                            <option value="NL">Nagaland</option>
-                            <option value="OD">Odisha</option>
-                            <option value="PB">Punjab</option>
-                            <option value="RJ">Rajasthan</option>
-                            <option value="SK">Sikkim</option>
-                            <option value="TN">Tamil Nadu</option>
-                            <option value="TG">Telangana</option>
-                            <option value="TR">Tripura</option>
-                            <option value="UP">Uttar Pradesh</option>
-                            <option value="UK">Uttarakhand</option>
-                            <option value="WB">West Bengal</option>
+                        <select id="states" name="states" class="w-full p-2 border rounded-lg mb-4">
+                           <option value="all">All</option>
+                           <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                           <option value="Andhra Pradesh">Andhra Pradesh</option>
+                           <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                           <option value="Assam">Assam</option>
+                           <option value="Bihar">Bihar</option>
+                           <option value="Chhattisgarh">Chhattisgarh</option>
+                           <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                           <option value="Delhi">Delhi</option>
+                           <option value="Goa">Goa</option>
+                           <option value="Gujarat">Gujarat</option>
+                           <option value="Haryana">Haryana</option>
+                           <option value="Himachal Pradesh">Himachal Pradesh</option>
+                           <option value="Jharkhand">Jharkhand</option>
+                           <option value="Karnataka">Karnataka</option>
+                           <option value="Kerala">Kerala</option>
+                           <option value="Ladakh">Ladakh</option>
+                           <option value="Lakshadweep">Lakshadweep</option>
+                           <option value="Madhya Pradesh">Madhya Pradesh</option>
+                           <option value="Maharashtra">Maharashtra</option>
+                           <option value="Manipur">Manipur</option>
+                           <option value="Meghalaya">Meghalaya</option>
+                           <option value="Mizoram">Mizoram</option>
+                           <option value="Nagaland">Nagaland</option>
+                           <option value="Odisha">Odisha</option>
+                           <option value="Punjab">Punjab</option>
+                           <option value="Rajasthan">Rajasthan</option>
+                           <option value="Sikkim">Sikkim</option>
+                           <option value="Tamil Nadu">Tamil Nadu</option>
+                           <option value="Telangana">Telangana</option>
+                           <option value="Tripura">Tripura</option>
+                           <option value="Uttar Pradesh">Uttar Pradesh</option>
+                           <option value="Uttarakhand">Uttarakhand</option>
+                           <option value="West Bengal">West Bengal</option>
                         </select>
 
-                        <button type="submit" class="w-full py-2 bg-orange-500 text-white rounded-lg mt-4 hover:bg-blue-600 transition">
+                        
+
+                        <button type="submit" class="w-full py-2 bg-orange-500 text-white rounded-lg mt-4 hover:bg-blue-600 transition" onclick="filter()">
                             Apply Filter
                         </button>
-                    </form>
+
+                        <button id="showFilterInstructions" onclick="showFilterInstruction()" class="w-full py-2 bg-green-500 text-white rounded-lg mt-4 hover:bg-blue-600 transition">See Instructions For Filters</button>
+                        <div class="hidden explanation mt-12" id="filter">
+                            <button id="closeFilterInstruction" onclick="closeFilterInstruction()" class="w-full py-2 bg-red-500 text-white rounded-lg mt-4 hover:bg-blue-600 transition">Close Instructions</button>
+                            <h2 class="text-2xl text-green-600 font-bold mb-6">How to Use the Pet Type and Location Filters</h2>
+                            <p class="text-lg text-blue-600 mb-6">Our filter system allows you to quickly narrow down the list of pets based on two key criteria: <strong>Pet Type</strong> and <strong>Location</strong>. Here's how it works:</p>
+                        
+                            <ul>
+                                <li class="mb-4"><strong class="text-red-600 text-2xl mr-2 mb-2">Pet Type Filter:</strong> Use the <strong>Pet Type</strong> dropdown to choose the type of pet you're interested in (e.g., Dog, Cat, Rabbit, Fish). Selecting a specific pet type will display only the items that match your choice. If you leave it unselected, all pet types will be shown.</li>
+                                <li class="mb-4"><strong class="text-red-600 text-2xl mr-2 mb-2">Location Filter:</strong> Use the <strong>Location</strong> dropdown to choose a geographic location (e.g., Madhya Pradesh, Andhra Pradesh). This filter will display only the items available in the selected location. If no location is selected, items from all locations will be shown.</li>
+                                <li class="mb-4"><strong class="text-red-600 text-2xl mr-2 mb-2">Combining Filters:</strong> You can use both filters together! For example, if you select <strong>Dog</strong> as the pet type and <strong>New York</strong> as the location, only the dogs available in New York will be displayed. If you clear one or both of the filters, the list will adjust accordingly to show more results.</li>
+                            </ul>
+                        
+                            <p>By using these filters, you can find exactly what you're looking for based on pet type and location, making your search easier and faster.</p>
+                        
+                            
+                            
+                        </div>
+                   
                 </div>
-                <form>
+                <form name="frm">
                     <input type="hidden" name="id">
                 </form>
-               
+               <div id="noresult" class="ml-48 text-red-600 text-3xl  w-96" style="display: none;">No Pets Available As Per Your Filter</div>
                 <div class="w-3/4">
-                    <div class="flex gap-6 flex-wrap justify-evenly">
+                    <div class="flex gap-6 flex-wrap justify-evenly" id="available">
 
                        
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(10)">
-                            <a href="#"><img src="pet.avif" class="w-full h-48 object-cover" alt="Jackey"></a>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="dog" state-name="Madhya Pradesh" onclick="getPetDetails(11)">
+                            <a href="#">
+                                <img src="pet.avif" class="w-full h-48 object-cover " alt="Jackey">
+                            </a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Simba</h5>
-                                <p class="text-gray-600">Male</p>
+                                <h5 class="text-2xl font-bold text-orange-600 ">Simba</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold"><span class="font-bold"></span>Madhya Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 15000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
                             <div class="card-body flex justify-center items-center py-2">
                                 <ul class="flex space-x-4">
-                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
-                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
-                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
-                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400 transition-colors duration-300"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400 transition-colors duration-300"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400 transition-colors duration-300"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400 transition-colors duration-300"><i class="fa-brands fa-twitter"></i></a></li>
                                 </ul>
                             </div>
                             <hr>
                             <div class="card-body text-center">
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                <a href="#" class="text-blue-600 hover:text-blue-800 ">
                                     See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
                                 </a>
                             </div>
                         </div>
-
-                       
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(11)">
+                        
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="cat"state-name="Andhra Pradesh" onclick="getPetDetails(11)">
                            <a><img src="cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Tigger</h5>
-                                <p class="text-gray-600">Male</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Tigger</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Andhra Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 1000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -151,11 +197,13 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(12)">
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="dog"state-name="Telangana" onclick="getPetDetails(12)">
                             <a href="#"><img src="review1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">AVIOLA</h5>
-                                <p class="text-gray-600">Male</p>
+                                <h5 class="text-2xl font-bold text-orange-600">AVIOLA</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Telangana</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 12000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -175,11 +223,13 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(13)">
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="rabbit"state-name="Gujarat" onclick="getPetDetails(13)">
                             <a href="#"><img src="rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Floppy</h5>
-                                <p class="text-gray-600">Male</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Floppy</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Gujarat</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 11000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -199,11 +249,13 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(14)">
-                            <a href="#"><img src="rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit" state-name="Madhya Pradesh"onclick="getPetDetails(14)">
+                            <a href="#"><img src="rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Fuzzy</h5>
-                                <p class="text-gray-600">Male</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Fuzzy</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Madhya Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 1000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -223,11 +275,13 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(15)">
-                            <a href="#"><img src="cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat"state-name="Telangana" onclick="getPetDetails(15)">
+                            <a href="#"><img src="cat4.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Bella</h5>
-                                <p class="text-gray-600">FeMale</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Bella</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Telangana</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 1000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -247,11 +301,113 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(16)">
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
                             <a href="#"><img src="review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Daisy</h5>
-                                <p class="text-gray-600">FeMale</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Daisy</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Andhra Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 17000</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
+                            <a href="#"><img src="rabbit2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-bold text-orange-600">Lisa</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Andhra Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 7000</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat" state-name="Telangana"onclick="getPetDetails(16)">
+                            <a href="#"><img src="cat2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-bold text-orange-600">Rickey</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Telangana</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 2000</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
+                            <a href="#"><img src="review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-bold text-orange-600">Jarvish</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Andhra Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 27000</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat"state-name="Madhya Pradesh" onclick="getPetDetails(16)">
+                            <a href="#"><img src="cat3.webp" class="w-full h-48 object-cover" alt="Sophie"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-bold text-orange-600">Sophie</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Madhya Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 7000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -271,11 +427,13 @@
                             </div>
                         </div>
 
-                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" onclick="myFunction(17)">
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Madhya Pradesh" onclick="getPetDetails(17)">
                             <a href="#"><img src="dog2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
-                                <h5 class="text-2xl font-semibold text-orange-600">Jack</h5>
-                                <p class="text-gray-600">FeMale</p>
+                                <h5 class="text-2xl font-bold text-orange-600">Jack</h5>
+                                <p class="text-gray-600 font-bold">FeMale</p>
+                                <p class="text-gray-600 font-bold">Madhya Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 7000</p>
                             </div>
                             <hr>
                             <p class="text-center text-red-400">Share with friends:</p>
@@ -294,6 +452,32 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit"state-name="Madhya Pradesh" onclick="getPetDetails(17)">
+                            <a href="#"><img src="rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <div class="card-body p-4">
+                                <h5 class="text-2xl font-bold text-orange-600">Jack</h5>
+                                <p class="text-gray-600 font-bold">Male</p>
+                                <p class="text-gray-600 font-bold">Madhya Pradesh</p>
+                                <p class="text-gray-600 "><span class="font-bold">Adoption Fee</span>: 9000</p>
+                            </div>
+                            <hr>
+                            <p class="text-center text-red-400">Share with friends:</p>
+                            <div class="card-body flex justify-center items-center py-2">
+                                <ul class="flex space-x-4">
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-facebook"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-youtube"></i></a></li>
+                                    <li><a href="#" class="hover:text-green-400"><i class="fa-brands fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="card-body text-center">
+                                <a href="#" class="text-blue-600 hover:text-blue-800">
+                                    See More Details &nbsp;<i class="fa-solid fa-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
 
                     </div>
                 </div>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetSafeHome</title>
+    <link rel="icon" href="logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,7 +16,7 @@
     
     <!--Header-->
     <header class="h-16 max-w-full bg-gray-700 text-white py-12 ">
-        <h1 class="absolute text-yellow-400 text-4xl left-2.5 font-bold mb-8">PetSafeHome</h1>
+        <h1 class="absolute text-yellow-400 top-4 text-4xl left-2.5 font-bold mb-8 top-4">PetSafeHome</h1>
         <div class="nav">
            <nav>
                 <ul class="absolute flex justify-between items-center right-10 top-8  gap-8">
@@ -29,20 +30,37 @@
         </div>
     </header>
 
+    <section>
+        <div class="container mt-8 mb-8">
+            <marquee behavoiur="slide" scrollamount ="30"><h1 class="title text-3xl text-blue-600 mt-8 mb-8">Welcome to <span class="text-yellow-400 font-bold">PetSafeHome</span></h1></marquee>
+            <p class="text-lg text-gray-800 leading-relaxed ml-6 mr-6 mt-2 tracking-wider">
+                Every pet deserves a second chance, and you’re one step closer to changing a life forever. Whether you're ready to adopt or just browsing, we’re here to help you find the perfect match for you and your family. Our adoptable pets are waiting for someone like you to offer them the love they deserve.
+            </p>
+            <p class="text-lg text-gray-800 leading-relaxed ml-6 mr-6  tracking-wider">
+                Thank you for choosing to make a difference. Together, we can make the world a better place, one pet at a time. 🐾
+            </p>
+           
+        </div>
+    </section>
+
     <!--Pet Background Image-->
     <main>
         <div class="w-full h-[550px] bg-[url('petBodyBackground.webp')] bg-cover"></div>
     </main>
 
+   
     <!--Ading one button for next page-->
     <section>
         <div class="container mx-auto px-6 mt-8">
-            <h2 class="font-semibold text-3xl text-green-400 mb-1 text-center">#AdoptLove</h2>
-            <p class="text-black-800">Approximately 1478 dogs & cats die every day on road in India. ThePetNest is on a mission to provide every dog and cat a home before 2035. It’s just one of the many ways ThePetNest! gives back and helps you become a part of something larger. Join ThePetStar Community and help setting up Pet houses in your surrounding for strays.</p>
+            <h2 class="font-semibold text-3xl text-green-400 mb-1 text-center mr-36">#AdoptLove</h2>
+            <p class="text-black-800 text-lg">Approximately 1478 dogs & cats die every day on road in India. ThePetNest is on a mission to provide every dog and cat a home before 2035. It’s just one of the many ways ThePetNest! gives back and helps you become a part of something larger. Join ThePetStar Community and help setting up Pet houses in your surrounding for strays.</p>
+            <div class="footer">
+                <p class="text-2xl text-blue-600 mt-4 ml-96">Start browsing and find your new best friend today!</p>
+            </div>
         </div>
         <div class="bg-white bg-opacity-50 relative top-[0px] left-[720px] w-[550px] m-[10px] p-[20px]">
             <h1 class="text-3xl">Adopt a Pet in India</h1><br>
-            <button><a href="petsList.html" class="btn btn-outline-primary bg-orange-400 ml-6  w-[200px]">Adopt Here</a></button>
+            <button><a href="login.html" class="btn btn-outline-primary bg-orange-400 ml-6  w-[200px]">Adopt Here</a></button>
         </div>
     </section>
 
@@ -120,7 +138,7 @@
                 <img src="review1.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">I love pets</h5>
-                  <p class="card-text">I am very happy to adopt Olivia. I was fortunate enough to find her on PetSafeHome. </p><br>
+                  <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home! </p><br>
                   <p class="text-orange-400 text-3xl hover:text-orange-600">Sarah </p>
                 </div>
               </div>
@@ -128,7 +146,7 @@
                 <img src="review2.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">Pets Love</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p><br>
+                  <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home!</p><br>
                  <p class="text-orange-400 text-3xl hover:text-orange-600">Jack</p>
                 </div>
               </div>
@@ -136,13 +154,46 @@
                 <img src="review2.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">Pets Love</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p><br>
+                  <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home!</p><br>
                  <p class="text-orange-400 text-3xl hover:text-orange-600">Jack</p>
                 </div>
               </div>
         </div>
        </div>
     </section>
+
+    <section>
+        <div class="contact-form max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-12">
+            <h3 class="text-2xl font-semibold text-center mb-6">Send Us a Review</h3>
+            <form action="" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required
+                        class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required
+                        class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Your message here..." required
+                        class="mt-1 p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit"
+                        class="w-full py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Add Revuiew
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
 
         <!--FAQ'S-->
     <section id="faq">
