@@ -10,11 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script src="search.js">
+<script src="JavaScript/search.js">
     
 </script>
 <body>
-
+    <!--Header-->
     <header class="bg-gray-700 text-white py-12">
         <h1 class="absolute text-yellow-400 text-4xl left-2.5 font-bold mb-8 top-4">PetSafeHome</h1>
         <nav class="absolute top-8 right-12">
@@ -49,6 +49,7 @@
             
         </div>
         <h3 class="text-3xl font-bold text-black text-center mb-6 mt-24">Pets Available For Adoption</h3>
+        <!--Giving Search Option to User-->
         <div class="flex justify-center items-center">
             <label for="search" class="text-2xl text-blue-600 font-bold">Search Categorey Here</label>
             <input type="text" id="searchInput" oninput="searchPets()"  id="search" placeholder="Search Here" class="w-1/4 ml-2 mt-8 px-4 py-3 mb-6 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
@@ -57,7 +58,7 @@
         <div class="container mx-auto px-6">
             <div class="flex gap-6">
 
-                
+                <!--Give Filter option to user-->
                 <div class="w-1/4 bg-gray-100 p-6 rounded-lg shadow-lg">
 
                         <a href="#"class="text-lg font-semibold mb-4 inline-block text-blue-400 hover:underline" onclick="resetFilters()">Reset Filters</a>
@@ -138,6 +139,7 @@
                 <form name="frm">
                     <input type="hidden" name="id">
                 </form>
+                <!--Displying list of all avilable pets-->
                <div id="noresult" class="ml-48 text-red-600 text-3xl  w-96" style="display: none;">No Pets Available As Per Your Filter</div>
                 <div class="w-3/4">
                     <div class="flex gap-6 flex-wrap justify-evenly" id="available">
@@ -145,7 +147,7 @@
                        
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="dog" state-name="Madhya Pradesh" onclick="getPetDetails(11)">
                             <a href="#">
-                                <img src="pet.avif" class="w-full h-48 object-cover " alt="Jackey">
+                                <img src="Images/pet.avif" class="w-full h-48 object-cover " alt="Jackey">
                             </a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600 ">Simba</h5>
@@ -172,7 +174,7 @@
                         </div>
                         
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="cat"state-name="Andhra Pradesh" onclick="getPetDetails(11)">
-                           <a><img src="cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
+                           <a><img src="Images/cat1.webp" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Tigger</h5>
                                 <p class="text-gray-600 font-bold">Male</p>
@@ -198,7 +200,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="dog"state-name="Telangana" onclick="getPetDetails(12)">
-                            <a href="#"><img src="review1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/review1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">AVIOLA</h5>
                                 <p class="text-gray-600 font-bold">Male</p>
@@ -224,7 +226,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden" data-animal="rabbit"state-name="Gujarat" onclick="getPetDetails(13)">
-                            <a href="#"><img src="rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/rabit1.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Floppy</h5>
                                 <p class="text-gray-600 font-bold">Male</p>
@@ -250,7 +252,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit" state-name="Madhya Pradesh"onclick="getPetDetails(14)">
-                            <a href="#"><img src="rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Fuzzy</h5>
                                 <p class="text-gray-600 font-bold">Male</p>
@@ -276,7 +278,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat"state-name="Telangana" onclick="getPetDetails(15)">
-                            <a href="#"><img src="cat4.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/cat4.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Bella</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -302,7 +304,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
-                            <a href="#"><img src="review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Daisy</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -327,7 +329,7 @@
                             </div>
                         </div>
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
-                            <a href="#"><img src="rabbit2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/rabbit2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Lisa</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -352,7 +354,7 @@
                             </div>
                         </div>
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat" state-name="Telangana"onclick="getPetDetails(16)">
-                            <a href="#"><img src="cat2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/cat2.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Rickey</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -377,7 +379,7 @@
                             </div>
                         </div>
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Andhra Pradesh" onclick="getPetDetails(16)">
-                            <a href="#"><img src="review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/review2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Jarvish</h5>
                                 <p class="text-gray-600 font-bold">Male</p>
@@ -402,7 +404,7 @@
                             </div>
                         </div>
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="cat"state-name="Madhya Pradesh" onclick="getPetDetails(16)">
-                            <a href="#"><img src="cat3.webp" class="w-full h-48 object-cover" alt="Sophie"></a>
+                            <a href="#"><img src="Images/cat3.webp" class="w-full h-48 object-cover" alt="Sophie"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Sophie</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -428,7 +430,7 @@
                         </div>
 
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="dog"state-name="Madhya Pradesh" onclick="getPetDetails(17)">
-                            <a href="#"><img src="dog2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/dog2.avif" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Jack</h5>
                                 <p class="text-gray-600 font-bold">FeMale</p>
@@ -453,7 +455,7 @@
                             </div>
                         </div>
                         <div class="card w-64 bg-white shadow-lg rounded-lg overflow-hidden"data-animal="rabbit"state-name="Madhya Pradesh" onclick="getPetDetails(17)">
-                            <a href="#"><img src="rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
+                            <a href="#"><img src="Images/rabbit3.jpg" class="w-full h-48 object-cover" alt="Aviola"></a>
                             <div class="card-body p-4">
                                 <h5 class="text-2xl font-bold text-orange-600">Jack</h5>
                                 <p class="text-gray-600 font-bold">Male</p>

@@ -11,7 +11,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
+<script src="JavaScript/reviewValidation.js"></script>
 <body class="max-w-full">
     
     <!--Header-->
@@ -45,7 +45,7 @@
 
     <!--Pet Background Image-->
     <main>
-        <div class="w-full h-[550px] bg-[url('petBodyBackground.webp')] bg-cover"></div>
+        <div class="w-full h-[550px] bg-[url('Images/petBodyBackground.webp')] bg-cover"></div>
     </main>
 
    
@@ -76,7 +76,7 @@
                     </p>
                 </div>
                 <div class="w-full md:w-1/2 mt-6 md:mt-0 ">
-                    <img src="pet.avif" alt="Pet" class="w-[450px] h-[500px] rounded-3xl ">
+                    <img src="Images/pet.avif" alt="Pet" class="w-[450px] h-[500px] rounded-3xl ">
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="flex flex-wrap items-center justify-between">
                 
                 <div class="w-full md:w-1/2 mt-6 md:mt-0">
-                    <img src="petSadImage.webp" alt="Pet image" class="w-[450px] h-[500px] rounded-3xl mx-auto">
+                    <img src="Images/petSadImage.webp" alt="Pet image" class="w-[450px] h-[500px] rounded-3xl mx-auto">
                 </div>
                 
                 <div class="w-full md:w-1/2 mt-6 md:mt-0">
@@ -135,7 +135,7 @@
         <h5 class="text-4xl font-bold mb-5 text-center">What our Customer Says</h5>
         <div class="flex  justify-evenly items-center">
             <div class="card transform transition-transform duration-600 hover:rotate-[360deg]"style="width: 18rem; ">
-                <img src="review1.avif" class="card-img-top" alt="...">
+                <img src="Images/review1.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">I love pets</h5>
                   <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home! </p><br>
@@ -143,7 +143,7 @@
                 </div>
               </div>
               <div class="card transform transition-transform duration-600 hover:rotate-[360deg]" style="width: 18rem;">
-                <img src="review2.avif" class="card-img-top" alt="...">
+                <img src="Images/review2.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">Pets Love</h5>
                   <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home!</p><br>
@@ -151,7 +151,7 @@
                 </div>
               </div>
               <div class="card transform transition-transform duration-600 hover:rotate-[360deg] " style="width: 18rem;">
-                <img src="review2.avif" class="card-img-top" alt="...">
+                <img src="Images/review2.avif" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title font-semibold text-green-600">Pets Love</h5>
                   <p class="card-text">Adopting a pet was one of the best decisions I've made—my new furry friend brings so much joy and love into my life. Highly recommend giving a rescue animal a forever home!</p><br>
@@ -165,7 +165,7 @@
     <section>
         <div class="contact-form max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-12">
             <h3 class="text-2xl font-semibold text-center mb-6">Send Us a Review</h3>
-            <form action="" method="post" class="space-y-4">
+            <form action="#" method="post" class="space-y-4" onsubmit="return reviewValidation()">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required
@@ -185,10 +185,9 @@
                 </div>
                 
                 <div>
-                    <button type="submit"
-                        class="w-full py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        Add Revuiew
-                    </button>
+                    <input type="submit"
+                        class="w-full py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-blue-500 " value="Add Revuiew">
+                        
                 </div>
             </form>
         </div>
